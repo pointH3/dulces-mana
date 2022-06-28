@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="./src/css/style.css">
+
+</head>
+<body>
+    <!-- NAv MENU -->
+    <nav class="d-flex justify-content-between align-items-center p-1">
+        <h2>Dulces Maná</h2>
+        <ul class="d-flex fs-4" style="list-style:none;">
+            <li class="ms-3">
+                <i class="bi bi-heart-fill"></i>
+            </li>
+            <li class="ms-3">
+                <i class="bi bi-facebook"></i>
+            </li>
+            <li class="ms-3 me-3">
+                <i class="bi bi-whatsapp"></i>
+            </li>
+        </ul>
+    </nav>
+    <!-- PANEL -->
+    <div id="panel" class="m-3">
+        <div class="row d-flex justify-content-center">
+
+            <div id="newProduct" class="col-sm-12 col-md-6 p-2">
+                <h3>Añadir Venta</h3>
+                <hr class="m-2">
+                <div class="row p-2">
+                    <div class="col-md-4 d-grid">
+                        <p>Kilogramos</p>
+                        <input type="number" placeholder="1Kg" class="me-md-4">
+                    </div>
+                    <div class="col-md-4 d-grid">
+                        <p>Costo</p>
+                        <input type="number" placeholder="$400" class="me-md-4">
+                    </div>
+                    <div class="col-md-4 d-grid">
+                        <p>Finalizar</p>
+                        <button type="button" class="btn btn-primary">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="m-2 d-md-none">
+
+            <div id="productList" class="col-sm-12 col-md-6 p-2">
+                <h3>Historial De Ventas</h3>
+                <hr class="m-2">
+                <div class="p-2">
+                    <div class="productItem">
+                        <ul>
+                            <li>10/07/2006</li>
+                            <li>3kg</li>
+                            <li>$300</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="productItem">
+                        <ul>
+                            <li>10/07/2006</li>
+                            <li>3kg</li>
+                            <li>$300</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="productItem">
+                        <ul>
+                            <li>10/07/2006</li>
+                            <li>3kg</li>
+                            <li>$300</li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="productItem">
+                        <ul>
+                            <li>10/07/2006</li>
+                            <li>3kg</li>
+                            <li>$300</li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

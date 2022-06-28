@@ -1,0 +1,61 @@
+$primary : rgb(221, 186, 213);
+$secondary : #8A6656;
+$terciary : #e4e3de;
+// font-family: 'Lobster', cursive;
+// font-family: 'Roboto', sans-serif;
+
+*{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+body{
+    background-color: $terciary;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    font-family: 'Lobster', cursive;
+    h2{
+        color: $secondary;
+        font-weight: bolder;
+    }
+    ul{
+        margin-bottom: 0px;
+        li{
+            color: $secondary;
+        }
+        li:hover{
+            color: $primary;
+            cursor: pointer;
+        }
+    }
+}
+
+#newProduct{
+    background-color: $primary;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+#productList{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+
+    .productItem{
+        background-color: $secondary;
+        &>ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+    }
+
+}
+
+// #panel>div>div{
+//     background-color: black;
+//    }
