@@ -28,7 +28,7 @@ const cakesPost = async(req=request, res=response)=>{
         kg,
         price
     })
-    // await cake.save();
+    await cake.save();
     res.json({cake});
 }
 

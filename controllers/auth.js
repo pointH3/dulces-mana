@@ -14,11 +14,11 @@ const login = async (req, res = response) => {
         if (!user)return res.status(400).json({errors:[{msg:"El mail no existe"}]})
 
         //Si el usuario esta activo
-        if (!user.status) {
-            return res.status(400).json({
-                msg: "Usuario deshabilitado"
-            })
-        }
+        // if (!user.status) {
+        //     return res.status(400).json({
+        //         msg: "Usuario deshabilitado"
+        //     })
+        // }
 
         // check password
         if(password!=user.password)return res.status(400).json({errors:[{msg:"Mail o Contraseña no validos"}]})
