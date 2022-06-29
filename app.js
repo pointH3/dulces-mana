@@ -9,7 +9,8 @@ const port = process.env.PORT;
 app.use(cors());
 
 const paths = {
-    cakes: '/api/cakes'
+    cakes: '/api/cakes',
+    auth: '/api/auth'
 }
 
 dbConnection();
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.use(paths.cakes, require('./routes/cakes'));
+app.use(paths.auth, require('./routes/auth'));
 
 app.listen(port, () => {
     console.clear();
