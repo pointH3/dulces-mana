@@ -46,11 +46,12 @@ nav{
     font-weight: bolder;
 
     .productItem{
-        background-color: $secondary;
+        background-color: $terciary;
         &>ul{
             display: flex;
             list-style: none;
             justify-content: space-around;
+            align-items: center;
         }
     }
 

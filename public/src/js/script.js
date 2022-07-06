@@ -1,5 +1,26 @@
 const url = "http://localhost:3000/";
 
+const reload = async()=>{
+    const list = document.getElementById('productList');
+
+    const fetchList = await fetch(url+'api/cakes').then(el=>el.json());
+    Array(fetchList);
+    fetchList.cakes.forEach(el => {
+        const item = document.createElement('div');
+        item.classList.add('productItem');
+        item.innerHTML = `
+            <ul>
+                <li>${el.date.completeDate}</li>
+                <li>${el.kg}kg</li>
+                <li>$${el.price}</li>
+            </ul>
+            <hr>
+        `;
+        list.appendChild(item);
+        // console.log(el.kg) 
+    });
+};
+
 const sell = async()=>{
     const form_kg = document.getElementById('form_kg');
     const form_price = document.getElementById('form_price');
@@ -21,35 +42,25 @@ const sell = async()=>{
     form_kg.value='';
     form_price.value='';
 
-    //reload();
-};
+    console.log('sold')
 
-const reload = ()=>{
-    const list = document.getElementById('productList');
-    // <div class="productItem">
-    //     <ul>
-    //         <li>10/07/2006</li>
-    //         <li>51kg</li>
-    //         <li>$015</li>
-    //     </ul>
-    //     <hr>
-    // </div>
+    reload();
 };
 
 window.onload = ()=>{
-    const hi = async()=>{
-        await fetch(url+'api/auth', {
-            method:"POST",
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            body:JSON.stringify({
-                "mail": "p@gmail.com",
-                "password": "123"
-            })
-        }).then(el=>el.json()).then(el=>console.log(el));
-    };
-    // hi();
-    // sell();
+    // const hi = async()=>{
+    //     await fetch(url+'api/auth', {
+    //         method:"POST",
+    //         headers:{
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body:JSON.stringify({
+    //             "mail": "p@gmail.com",
+    //             "password": "123"
+    //         })
+    //     }).then(el=>el.json()).then(el=>console.log(el));
+    // };
+
+    // reload()
 }
 

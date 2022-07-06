@@ -40,10 +40,11 @@ nav ul li:hover {
   font-weight: bolder;
 }
 #productList .productItem {
-  background-color: #8A6656;
+  background-color: #e4e3de;
 }
 #productList .productItem > ul {
   display: flex;
   list-style: none;
   justify-content: space-around;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
