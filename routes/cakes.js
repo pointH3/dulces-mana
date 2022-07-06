@@ -9,11 +9,11 @@ const isAdmin = require('../middlewares/validarAdmin');
 const router = Router();
 
 router.get('/',[
-    validarJwt,
-    validarCampos
+    // validarJwt,
+    // validarCampos
 ],cakesGet);
 router.post('/',[
-    validarJwt,
+    // validarJwt,
     check('kg','El KG no es numerico').isNumeric(),
     check('price','El PRECIO no es numerico').isNumeric(),
     validarCampos

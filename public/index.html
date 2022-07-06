@@ -76,20 +76,30 @@
                 <table class="table">
                     <thead>
                       <tr>
+                        <th scope="col">#</th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Kilogramos</th>
                         <th scope="col">Precio</th>
-                        <!-- <th scope="col">Borrar</th> -->
                       </tr>
                     </thead>
                     <tbody id="productList">
                       <tr>
+                        <td></td>
                         <td>06/07/2022</td>
-                        <td>1</td>
+                        <td>1kg</td>
                         <td>$300</td>
                         <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
                       </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th><span id="totalKg"></span>kg</th>
+                            <th>$ <span id="totalPrice"></span> </th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
                 </table>
 
                 
@@ -99,13 +109,10 @@
 
         </div>
     </div>
-
-    <div>
-        
-    </div>
     
+    <!-- Scripts -->
     <script src="./src/js/script.js"></script>
-    <!-- JavaScript Bundle with Popper -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
