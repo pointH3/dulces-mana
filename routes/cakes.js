@@ -18,6 +18,11 @@ router.post('/',[
     check('price','El PRECIO no es numerico').isNumeric(),
     validarCampos
 ],cakesPost);
+router.delete('/:id',[
+    validarJwt,
+    check('id','No es un ID valido').isMongoId(),
+    validarCampos
+])
 
 module.exports = router;
 

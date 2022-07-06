@@ -9,7 +9,7 @@ const cakesGet = async (req = request, res = response)=>{
         cakes
     })
     
-}
+};
 const cakesPost = async(req=request, res=response)=>{
     const {kg,price} = req.body;
     let today = new Date();
@@ -30,10 +30,18 @@ const cakesPost = async(req=request, res=response)=>{
     })
     await cake.save();
     res.json({cake});
-}
+};
+const cakesDelete = async(req=request, res=response)=>{
+    const {id} = req.params;
+    const cake = await Cake.findByIdAndDelete(id);
+    res.json({
+        cake
+    })
+};
 
 
 module.exports = {
     cakesGet,
-    cakesPost
+    cakesPost,
+    cakesDelete
 }

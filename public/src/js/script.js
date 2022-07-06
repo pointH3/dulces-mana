@@ -6,6 +6,7 @@ const reload = async()=>{
     const totalPriceDom = document.querySelector('#totalPrice');
     
     const fetchList = await fetch(url+'api/cakes').then(el=>el.json());Array(fetchList);
+    console.log(fetchList);
     var totalKg = 0;
     var totalPrice = 0;
     await fetchList.cakes.forEach(el => {
