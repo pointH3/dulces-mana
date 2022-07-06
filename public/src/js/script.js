@@ -2,19 +2,18 @@ const url = "http://localhost:3000/";
 
 const reload = async()=>{
     const list = document.getElementById('productList');
+    list.innerHTML='';
 
     const fetchList = await fetch(url+'api/cakes').then(el=>el.json());
     Array(fetchList);
     fetchList.cakes.forEach(el => {
-        const item = document.createElement('div');
+        const item = document.createElement('tr');
         item.classList.add('productItem');
         item.innerHTML = `
-            <ul>
-                <li>${el.date.completeDate}</li>
-                <li>${el.kg}kg</li>
-                <li>$${el.price}</li>
-            </ul>
-            <hr>
+            <td>${el.date.completeDate}</td>
+            <td>${el.kg}kg</td>
+            <td>$${el.price}</td>
+            <td></td>
         `;
         list.appendChild(item);
         // console.log(el.kg) 

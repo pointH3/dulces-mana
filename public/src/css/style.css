@@ -34,17 +34,17 @@ nav ul li:hover {
   font-weight: bolder;
 }
 
-#productList {
+#panelProductList {
   background-color: white;
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
 }
-#productList .productItem {
+#panelProductList #productList tr {
   background-color: #e4e3de;
+  vertical-align: middle;
 }
-#productList .productItem > ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  align-items: center;
+#panelProductList #productList button {
+  height: 30px;
+  width: 30px;
+  color: black;
 }/*# sourceMappingURL=style.css.map */

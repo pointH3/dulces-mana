@@ -40,18 +40,21 @@ nav{
     font-weight: bolder;
 }
 
-#productList{
+#panelProductList{
     background-color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
 
-    .productItem{
-        background-color: $terciary;
-        &>ul{
-            display: flex;
-            list-style: none;
-            justify-content: space-around;
-            align-items: center;
+    #productList{
+        tr{
+            // padding: 100%;
+            background-color: $terciary;
+            vertical-align: middle;
+        }
+        button{
+            height: 30px ;
+            width: 30px ;
+            color: black;
         }
     }
 
