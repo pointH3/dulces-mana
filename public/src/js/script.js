@@ -1,6 +1,6 @@
 const url = "http://localhost:3000/";
 
-const reload = async()=>{
+const reloadCake = async()=>{
     const list = document.getElementById('productList'); list.innerHTML='';
     const totalKgDom = document.querySelector('#totalKg');
     const totalPriceDom = document.querySelector('#totalPrice');
@@ -17,7 +17,7 @@ const reload = async()=>{
             <td>${el.date.completeDate}</td>
             <td>${el.kg}kg</td>
             <td>$${el.price}</td>
-            <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+            <td><button class="btn btn-danger" onclick='deleteCake("${el._id}");'><i class="bi bi-trash"></i></button></td>
         `;
         totalKg+=el.kg;
         totalPrice+=el.price;
@@ -28,7 +28,7 @@ const reload = async()=>{
 
 };
 
-const sell = async()=>{
+const sellCake = async()=>{
     const form_kg = document.getElementById('form_kg');
     const form_price = document.getElementById('form_price');
 
@@ -51,7 +51,17 @@ const sell = async()=>{
 
     console.log('sold')
 
-    reload();
+    reloadCake();
+};
+
+const deleteCake = async(id)=>{
+    await fetch(url+`api/cakes/${id}`, {
+        method:"DELETE",
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    }).then(el=>el.json());
+    reloadCake();
 };
 
 window.onload = ()=>{
@@ -68,6 +78,6 @@ window.onload = ()=>{
     //     }).then(el=>el.json()).then(el=>console.log(el));
     // };
 
-    reload()
+    reloadCake();
 }
 
