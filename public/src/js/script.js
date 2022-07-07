@@ -1,4 +1,5 @@
-const url = "http://localhost:3000/";
+// const url = "http://localhost:3000/";
+const url = "https://dulces-mana.herokuapp.com/"
 
 const reloadCake = async()=>{
     const list = document.getElementById('productList'); list.innerHTML='';
