@@ -5,6 +5,7 @@
 
 body {
   background-color: #e4e3de;
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -28,6 +29,10 @@ nav ul li:hover {
   cursor: pointer;
 }
 
+#loginPanel > div {
+  background-color: rgb(221, 186, 213);
+}
+
 #newProduct {
   background-color: rgb(221, 186, 213);
   font-family: "Roboto", sans-serif;
@@ -36,7 +41,6 @@ nav ul li:hover {
 
 #panelProductList {
   background-color: white;
-  font-family: "Roboto", sans-serif;
   font-weight: bolder;
 }
 #panelProductList #productList tr {

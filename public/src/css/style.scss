@@ -11,6 +11,7 @@ $terciary : #e4e3de;
 
 body{
     background-color: $terciary;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav{
@@ -34,6 +35,12 @@ nav{
     }
 }
 
+#loginPanel{
+    &>div{
+        background-color: $primary;
+    }
+}
+
 #newProduct{
     background-color: $primary;
     font-family: 'Roboto', sans-serif;
@@ -42,7 +49,6 @@ nav{
 
 #panelProductList{
     background-color: white;
-    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
 
     #productList{
